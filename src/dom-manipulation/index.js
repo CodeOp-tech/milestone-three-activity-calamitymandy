@@ -23,7 +23,7 @@ function handleSubmit(event) {
   //bodyElem.classList.add("fontVerdana");
   bodyElem.setAttribute(
     "style",
-    "font-family: Verdana, Geneva, Tahoma, sans-serif;"
+    "font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; background: #6bc8c9; margin: 100px;"
   );
 
   //Mostrar en <span> el contenido de los inputs.
@@ -51,6 +51,17 @@ function handleSubmit(event) {
   console.log(bodyElem.children);
   bodyElem.insertBefore(imgElem, bodyElem.children[1]);
 
+  //Modifica y añade estilo
+  let inputElem = document.querySelectorAll("input");
+  inputElem[0].setAttribute("style", "width: 100%; margin: 15px");
+  inputElem[1].setAttribute("style", "width: 100%; margin: 15px");
+  inputElem[2].setAttribute("style", "width: 100%; margin: 15px");
+
+  const ulElem = document.querySelector("ul");
+  ulElem.setAttribute(
+    "style",
+    "border-color: lightslategrey; border-style: solid; border-radius: 10px; padding: 20px;"
+  );
   //alert("Submit!");
 }
 
