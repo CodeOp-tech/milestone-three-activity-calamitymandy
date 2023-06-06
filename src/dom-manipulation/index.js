@@ -20,7 +20,6 @@ function handleSubmit(event) {
 
   //Cambiar el estilo del elemento <body>
   const bodyElem = document.querySelector("body");
-  //bodyElem.classList.add("fontVerdana");
   bodyElem.setAttribute(
     "style",
     "font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; background: #6bc8c9; margin: 100px;"
@@ -46,10 +45,14 @@ function handleSubmit(event) {
   }
   //Crear elem <img> con src: imagen tuya y añadir a "Sobre mi".
   const imgElem = document.createElement("img");
-  imgElem.setAttribute("src", "./IMG_5562.JPG");
-  imgElem.setAttribute("height", "200px");
+  imgElem.setAttribute(
+    "src",
+    "https://avatars.githubusercontent.com/u/113436356?v=4"
+  );
+  imgElem.setAttribute("alt", "foto mia");
+  imgElem.setAttribute("style", "height: 200px; border-radius: 50%");
   console.log(bodyElem.children);
-  bodyElem.insertBefore(imgElem, bodyElem.children[1]);
+  bodyElem.insertBefore(imgElem, bodyElem.children[0]);
 
   //Modifica y añade estilo
   let inputElem = document.querySelectorAll("input");
